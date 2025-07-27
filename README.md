@@ -20,8 +20,9 @@ meeting, the employee followed instructions to execute multiple wire transfers, 
 financial loss.
 
 Companies currently face a difficult trade-off:
-    -Risk Fraud: Rely on current, lax digital protocols where multi-person meetings are easily faked.
-    -Slow Operations: Insist on inconvenient, in-person approvals for large payments, severely impeding 
+
+1. Risk Fraud: Rely on current, lax digital protocols where multi-person meetings are easily faked.
+2. Slow Operations: Insist on inconvenient, in-person approvals for large payments, severely impeding 
     global business speed.
 
 Validation: The need for this solution has been validated through discussion with CISOs in the field through 
@@ -78,8 +79,8 @@ alert is triggered, activating a pre-defined Escalation Framework that connects 
 local law enforcement, and integrated insurance protocols, ensuring prosecution is ready.
 
 Toolkit
-    -Meeting Core: Zoom SDK
-    - Pre-meeting ID Verification: Persona
-    - During-meeting Deepfake Detection: Reality Defender
-    - Accountability: Audit Trail, Integration with Insurance
-    - Legal Response: Escalation framework to internal/local law enforcement
+1. Meeting Core: Zoom SDK
+2. Pre-meeting ID Verification: Persona
+3. uring-meeting Deepfake Detection: Reality Defender
+4. Accountability: Audit Trail, Integration with Insurance
+5. Legal Response: Escalation framework to internal/local law enforcement

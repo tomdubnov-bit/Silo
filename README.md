@@ -78,7 +78,6 @@ alert is triggered, activating a pre-defined Escalation Framework that connects 
 local law enforcement, and integrated insurance protocols, ensuring prosecution is ready.
 
 Toolkit
-
     -Meeting Core: Zoom SDK
     - Pre-meeting ID Verification: Persona
     - During-meeting Deepfake Detection: Reality Defender

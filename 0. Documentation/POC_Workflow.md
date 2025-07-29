@@ -2,7 +2,7 @@ POC Workflow - Stereo Vision Deepfake Detection
 
 SETUP (One-Time Calibration)
 1. Hardware Setup
-    a. Two cameras positioned at ~90 degree angle
+    a. Two cameras positioned at ~30 degree angle
     b. Cameras fixed in position (do not move after calibration)
 
 2. Stereo Calibration

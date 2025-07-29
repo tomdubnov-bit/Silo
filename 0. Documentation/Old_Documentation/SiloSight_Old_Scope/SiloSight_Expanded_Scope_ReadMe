@@ -35,7 +35,7 @@ Technical Stack
 
 Output & Measure of Success
 1. Output
-    Pass/Fail outcome given a threshold of 60
+    Pass/Fail outcome given a confidence threshold of 60
 2. Control
     10 Sec video of a real human looking up, down, to the left, right and speaking
 3. Deepfake Test

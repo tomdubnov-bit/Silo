@@ -179,3 +179,6 @@ python validate_calibration.py \
 ```
 
 This creates `epipolar_lines.png` showing that points in one view lie on corresponding epipolar lines in the other view.
+
+
+Print Checkerboard at: https://calib.io/pages/camera-calibration-pattern-generator 

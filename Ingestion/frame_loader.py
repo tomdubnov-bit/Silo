@@ -278,7 +278,70 @@ def resize_frame(frame, target_size=None, scale_factor=None):
     return resized
 
 
-def split_side_by_side_image(image_path, output_dir=None, names=('cam1', 'cam2')):
+def detect_content_bounds(image):
+    """
+    Detect non-black content boundaries in an image.
+    Useful for cropping Zoom recordings with black bars.
+
+    Args:
+        image (np.ndarray): Input image (BGR)
+
+    Returns:
+        tuple: (x, y, width, height) of content region, or None if detection fails
+    """
+    # Convert to grayscale
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Threshold to find non-black pixels (anything above 10 is considered content)
+    _, thresh = cv2.threshold(gray, 10, 255, cv2.THRESH_BINARY)
+
+    # Find contours of non-black regions
+    contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    if not contours:
+        return None
+
+    # Get bounding box of largest contour (should be the content area)
+    largest_contour = max(contours, key=cv2.contourArea)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+
+    return (x, y, w, h)
+
+
+def crop_to_content(image, padding=0):
+    """
+    Automatically crop image to remove black bars.
+
+    Args:
+        image (np.ndarray): Input image (BGR)
+        padding (int): Pixels of padding to leave around content
+
+    Returns:
+        np.ndarray: Cropped image, or original if detection fails
+    """
+    bounds = detect_content_bounds(image)
+
+    if bounds is None:
+        print("⚠ Warning: Could not detect content bounds, returning original image")
+        return image
+
+    x, y, w, h = bounds
+
+    # Apply padding (but don't go outside image bounds)
+    x = max(0, x - padding)
+    y = max(0, y - padding)
+    w = min(image.shape[1] - x, w + 2 * padding)
+    h = min(image.shape[0] - y, h + 2 * padding)
+
+    cropped = image[y:y+h, x:x+w]
+
+    print(f"✓ Cropped from {image.shape[1]}x{image.shape[0]} to {w}x{h}")
+    print(f"  Removed: {y}px top, {image.shape[0]-y-h}px bottom, {x}px left, {image.shape[1]-x-w}px right")
+
+    return cropped
+
+
+def split_side_by_side_image(image_path, output_dir=None, names=('cam1', 'cam2'), auto_crop=True):
     """
     Split a side-by-side image (e.g., Zoom screenshot) into two separate images.
 
@@ -286,6 +349,7 @@ def split_side_by_side_image(image_path, output_dir=None, names=('cam1', 'cam2')
         image_path (str): Path to side-by-side image
         output_dir (str): Directory to save split images (None = don't save)
         names (tuple): Names for left and right images
+        auto_crop (bool): Automatically crop black bars before splitting (default: True)
 
     Returns:
         tuple: (left_image, right_image) as numpy arrays
@@ -300,6 +364,10 @@ def split_side_by_side_image(image_path, output_dir=None, names=('cam1', 'cam2')
     image = cv2.imread(image_path)
     if image is None:
         raise ValueError(f"Failed to load image: {image_path}")
+
+    # Auto-crop black bars if requested
+    if auto_crop:
+        image = crop_to_content(image, padding=0)
 
     height, width = image.shape[:2]
 

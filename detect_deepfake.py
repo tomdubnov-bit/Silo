@@ -117,6 +117,17 @@ class DeepfakeDetectionPipeline:
         Returns:
             dict: Detection result, or None if detection failed
         """
+        # Resize frames to match calibration resolution if needed
+        import cv2
+        calib_size = self.triangulator.calibration['image_size']
+        calib_width, calib_height = int(calib_size[0]), int(calib_size[1])
+
+        if frame_front.shape[:2] != (calib_height, calib_width):
+            if self.verbose:
+                print(f"\nResizing frames from {frame_front.shape[1]}x{frame_front.shape[0]} to {calib_width}x{calib_height} to match calibration")
+            frame_front = cv2.resize(frame_front, (calib_width, calib_height))
+            frame_side = cv2.resize(frame_side, (calib_width, calib_height))
+
         # Step 1: Detect landmarks
         if self.verbose:
             print(f"\n{'='*70}")

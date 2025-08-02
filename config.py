@@ -60,18 +60,15 @@ MEDIAPIPE_CONFIG = {
 }
 
 # Key facial landmarks to use for triangulation (MediaPipe indices)
-# These are stable landmarks visible from both front and side views
+# These are rigid, bone-structure landmarks visible from both front and side views
+# Selected for expression-invariance (not affected by smiling, talking, etc.)
 KEY_LANDMARKS = [
     1,    # Nose tip
     4,    # Nose bridge top
+    199,  # Nose bridge mid
     152,  # Chin
     234,  # Left forehead
     454,  # Right forehead
-    33,   # Left eye outer corner
-    263,  # Right eye outer corner
-    61,   # Left mouth corner
-    291,  # Right mouth corner
-    199,  # Nose bridge mid
 ]
 
 # Alternative: Use all 468 landmarks (set to None to use KEY_LANDMARKS)

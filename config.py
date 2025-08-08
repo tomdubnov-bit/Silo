@@ -35,7 +35,7 @@ STEREO_CALIBRATION_FLAGS = (
 MAX_CALIBRATION_ERROR = 1.0
 
 # Minimum number of checkerboard images needed for good calibration
-MIN_CALIBRATION_IMAGES = 15
+MIN_CALIBRATION_IMAGES = 10
 
 # ============================================================================
 # CAMERA PARAMETERS

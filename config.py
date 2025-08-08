@@ -63,7 +63,7 @@ MEDIAPIPE_CONFIG = {
 # These are rigid, bone-structure landmarks visible from both front and side views
 # Selected for expression-invariance (not affected by smiling, talking, etc.)
 KEY_LANDMARKS = [
-    1,    # Nose tip
+    1,    # Nose tip (testing)
     4,    # Nose bridge top
     199,  # Nose bridge mid
     152,  # Chin

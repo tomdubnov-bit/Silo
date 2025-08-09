@@ -79,7 +79,7 @@ USE_ALL_LANDMARKS = False
 # ============================================================================
 
 # Reprojection error thresholds (pixels)
-REAL_HUMAN_THRESHOLD = 5.0  # Below this = likely real human
+REAL_HUMAN_THRESHOLD = 7.0  # Below this = likely real human
 DEEPFAKE_THRESHOLD = 15.0   # Above this = likely deepfake
 
 # Confidence score boundaries

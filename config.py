@@ -55,7 +55,7 @@ CAMERA_RESOLUTION = None  # Set to (width, height) to override, e.g., (1280, 720
 MEDIAPIPE_CONFIG = {
     'max_num_faces': 1,
     'refine_landmarks': True,
-    'min_detection_confidence': 0.7,
+    'min_detection_confidence': 0.5,
     'min_tracking_confidence': 0.5
 }
 

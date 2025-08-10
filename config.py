@@ -32,7 +32,7 @@ STEREO_CALIBRATION_FLAGS = (
 )
 
 # Maximum acceptable reprojection error during calibration (pixels)
-MAX_CALIBRATION_ERROR = 0.5
+MAX_CALIBRATION_ERROR = 1.0
 
 # Minimum number of checkerboard images needed for good calibration
 MIN_CALIBRATION_IMAGES = 10

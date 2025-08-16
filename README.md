@@ -43,7 +43,7 @@ Usage
 
 1. Calibration (One-Time Setup)
 
-Record a 20-30 second calibration video with both cameras visible (join Zoom from two separate devices for best results). Start recording. Hold checkerboard and move it around for 20-30 seconds at different distances, angles, and positions. Stop recording.
+Record calibration video with both cameras visible (join Zoom from two separate devices for best results). Start recording. Hold checkerboard and move it around for 20-30 seconds at different distances, angles, and positions. Stop recording.
 
 Split the video:
 python3 Ingestion/split_zoom_video.py path/to/zoom_calibration.mp4 --output-prefix cam_calibration

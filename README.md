@@ -27,7 +27,7 @@ Getting Started
 
 Requirements:
 - Python 3.10 or higher
-- Two webcams (ideally two separate computers joining the same Zoom call for proper stereo setup)
+- Two webcams (REQUIRED: two separate computers joining the same Zoom call for proper stereo setup)
 - Printed checkerboard pattern (8 rows x 11 columns, 5/8 inch squares)
 
 Installation:

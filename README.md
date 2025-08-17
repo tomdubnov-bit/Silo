@@ -2,7 +2,7 @@ Silo-Sight Multi-View Deepfake Integrity Check
 
 
 Motivation
-In early 2024, the multinational firm Arup suffered a staggering loss of approximately $25 million due to a sophisticated deepfake attack. An employee, initially suspicious of an email request, was convinced to authorize the transfers after attending a fake video conference. During the call, all participants, including the Chief Financial Officer and senior colleagues, were AI-generated deepfakes with convincingly cloned visuals. This is not an isolated case. As deepfake sophistication and access accelerates, businesses suffer financial, operational and reputation damage. Companies currently face a difficult trade-off:
+In 2024, the multinational firm Arup suffered a staggering loss of approximately $25 million due to a sophisticated deepfake attack. An employee, initially suspicious of an email request, was convinced to authorize the transfers after attending a fake video conference. During the call, all participants, including the Chief Financial Officer and senior colleagues, were AI-generated deepfakes with convincingly cloned visuals. This is not an isolated case. As deepfake sophistication and access accelerates, businesses suffer financial, operational and reputation damage. Companies currently face a difficult trade-off:
 1. Risk Fraud: Rely on current, lax digital protocols where web conferences are easily faked.
 2. Slow Operations: Insist on in-person approvals for high stakes meetings, severely impeding operational speed.
 Arup's loss proves that relying on visual recognition in 2D web conferencing environments is no longer safe.

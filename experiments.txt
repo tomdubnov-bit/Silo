@@ -1,0 +1,3 @@
+Threshold Experiments Log
+=======================
+Testing various threshold combinations

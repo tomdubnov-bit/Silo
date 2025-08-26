@@ -42,7 +42,7 @@ MIN_CALIBRATION_IMAGES = 10
 # ============================================================================
 
 # Expected camera angle separation (degrees)
-CAMERA_ANGLE_SEPARATION = 25
+CAMERA_ANGLE_SEPARATION = 30
 
 # Camera resolution (will be auto-detected but can override)
 CAMERA_RESOLUTION = None  # Set to (width, height) to override, e.g., (1280, 720)

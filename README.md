@@ -51,7 +51,7 @@ python3 Ingestion/split_zoom_video.py path/to/zoom_calibration.mp4 --output-pref
 Run calibration:
 python3 Calibration/stereo_calibrate.py --cam1 cam_calibration1.mp4 --cam2 cam_calibration2.mp4 --frame_interval 30
 
-This generates stereo_calibration.npz. Do NOT move the cameras after calibration.
+This generates stereo_calibration.npz. IMPORTANT: Do NOT move cameras after calibration.
 
 2. Deepfake Detection
 

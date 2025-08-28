@@ -1,5 +1,0 @@
-Threshold Experiments Log
-=======================
-Testing various threshold combinations
-
-Results: 5px/15px works best

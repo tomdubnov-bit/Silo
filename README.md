@@ -26,7 +26,7 @@ Real humans produce low reprojection errors (below 5 pixels). Deepfakes displaye
 Getting Started
 
 Requirements:
-- Python 3.10+ 3.10 or higher
+- Python 3.10 or higher
 - Two webcams (ideally two separate computers joining the same Zoom call for proper stereo setup)
 - Printed checkerboard pattern (8 rows x 11 columns, 5/8 inch squares)
 

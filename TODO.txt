@@ -1,3 +1,0 @@
-- Test with more subjects
-- Add video processing
-- Optimize performance
